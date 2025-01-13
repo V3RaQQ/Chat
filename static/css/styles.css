@@ -226,3 +226,41 @@ button:hover {
     word-wrap: break-word;
     margin-top: 10px; /* Отступ между текстом и картинкой */
 }
+
+
+.file-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.file-container:hover {
+    background-color: #e9ecef;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.file-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.file-link {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.file-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

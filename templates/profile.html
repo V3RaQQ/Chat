@@ -12,7 +12,9 @@
             <a href="/" class="home-button">Home</a>
         </div>
         <div class="avatar-section">
-            <img class="profile-avatar" src="{{url_for('static', filename='images/' + user.avatar_path)}}" alt="Profile Avatar">
+
+            <img src="{{ url_for('static', filename='images/' + user.avatar_path) }}" alt="Avatar" class="profile-avatar">
+
             <form class="change-image" action="/change_file" method="POST" enctype="multipart/form-data">
                 <label for="fileInput">Выберите файл</label>
                 <input type="file" name="file_form" id="fileInput" />

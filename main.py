@@ -5,31 +5,38 @@ import json
 import os
 from user import User
 
-#json.dump() json.load()
-
-# if os.path.exists("C:\Users\ivand\OneDrive\Рабочий стол\Chat\data.json"):
-#     json.load("C:\Users\ivand\OneDrive\Рабочий стол\Chat\data.json", )
-
-
-
-
 
 app = Flask(__name__)
 
 messages: List[Message] = []
 
 
-if os.path.exists("messages.json"):
-    messages = Message.from_json_to_list()
+# if os.path.exists("messages.json"):
+#     messages = Message.from_json_to_list()
 
+# else:
+#     with open("messages.json", "w") as file:
+#         json.dump([], file)
+
+# if os.path.exists("users.json"):
+#     users: List[User] = User.from_json_to_list()
+# else:
+#     with open("users.json", "w") as file:
+#         json.dump([], file)
+
+json_path = os.path.join(os.getcwd(), "json")
+os.makedirs(os.path.join(os.getcwd(), "json"), exist_ok=True)
+
+if os.path.exists(os.path.join(json_path, "messages.json")):
+    messages = Message.from_json_to_list()
 else:
-    with open("messages.json", "w") as file:
+    with open(os.path.join(json_path, "messages.json"), "w") as file:
         json.dump([], file)
 
-if os.path.exists("users.json"):
+if os.path.exists(os.path.join(json_path, "users.json")):
     users: List[User] = User.from_json_to_list()
 else:
-    with open("users.json", "w") as file:
+    with open(os.path.join(json_path, "users.json"), "w") as file:
         json.dump([], file)
 
 
@@ -98,7 +105,7 @@ def send():
             messages.append(Message(user.user_id, user.name, user.avatar_path, text, user_file.filename if user_file else None, Message.get_type_visual(user_file.filename)))
 
         else:
-            messages.append(Message(-1, "Ghost", "icon.png", text))
+            messages.append(Message(-1, "Ghost", "profile_icon.png", text))
 
         Message.save_to_json(messages)
     return redirect(url_for("home"))
@@ -123,8 +130,11 @@ def register_submit():
         users.append(User(name, password))
 
     
-        with open("users.json", "w") as file:
+        # with open(url_for("json", "users.json"), "w") as file:
+        #     json.dump([user.__dict__ for user in users], file, indent=4)
+        with open(os.path.join(os.path.join(os.getcwd(), "json"), "users.json"), "w") as file:
             json.dump([user.__dict__ for user in users], file, indent=4)
+        
                 
 
     return redirect(url_for("home"))

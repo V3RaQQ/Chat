@@ -22,7 +22,7 @@
         <div class="profile-button-container">
             <a href="/profile" class="profile-button">
                 <b>Ghost</b>
-                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Profile">
+                <img src="{{ url_for('static', filename='icons/profile_icon.png') }}" alt="Profile">
             </a>
         </div>
         {% endif %}
@@ -42,7 +42,13 @@
                 </div>
                 {% if message.file_path: %}
                     {% if message.type_visual: %}
-                        <a href="/download/{{message.file_path}}"><img src="{{ url_for('static', filename='temp/' + message.type_visual) }}" class="user-file"></a>
+                        <!-- <a href="/download/{{message.file_path}}"><img src="{{ url_for('static', filename='temp/' + message.type_visual) }}" class="user-file"></a> -->
+                        <div class="file-container">
+                            <img src="{{ url_for('static', filename='icons/' + message.type_visual) }}" alt="File Icon" class="file-icon">
+                            <a href="/download/{{message.file_path}}" class="file-link">
+                                {{ message.file_path.split(".")[0] if message.file_path.split(".")[0]|length <= 20 else message.file_path.split(".")[0][:20] + '...' }}
+                            </a>
+                        </div>
                     {% else %}
                         <a href="/download/{{message.file_path}}"><img src="{{ url_for('static', filename='temp/' + message.file_path) }}" class="user-file"></a>
                     {% endif %}
@@ -55,7 +61,7 @@
         <form class="chat-input" action="/send" method="POST" enctype="multipart/form-data">
             <input name="text" type="text" placeholder="Type your message here..." id="messageInput">
             <label for="fileInput" class="file-label">
-                <img src="{{url_for('static', filename='images/screpka_icon.png')}}">
+                <img src="{{url_for('static', filename='icons/screpka_icon.png')}}">
             </label>
             <input name="user_file" type="file" id="fileInput">
             <button id="sendBtn" type="submit">Send</button>

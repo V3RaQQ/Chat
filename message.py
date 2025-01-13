@@ -1,8 +1,10 @@
 import json
 from typing import List
+import os
 
-
-
+json_path = os.path.join(os.getcwd(), "json")
+os.makedirs(json_path, exist_ok=True) 
+messages_file = os.path.join(json_path, "messages.json")
 
 class Message:
     id_counter = 0
@@ -23,12 +25,13 @@ class Message:
     
     @staticmethod
     def save_to_json(messages):
-        with open("messages.json", "w") as file:
+        with open(messages_file, "w") as file:
+            #os getcwd для корректного формирования пути
             json.dump( [message.get_json() for message in messages], file, indent=4)
 
     @staticmethod
     def from_json_to_list():
-        with open("messages.json", "r") as file:
+        with open(messages_file, "r") as file:
             messages = []
             for message in json.load(file):
 
@@ -39,7 +42,19 @@ class Message:
 
         return messages
     
-    @staticmethod
+    # @staticmethod
+    # def get_type_visual(file_path):
+    #     files = {
+    #         "docx": "word_icon.png",
+    #         "txt": "text_icon.png",
+    #         "mp4": "video_icon.png",
+    #         "mov": "video_icon.png",
+    #         "gif": "video_icon.png",
+    #         "avi": "video_icon.png"
+    #     }
+
+    #     return files[file_path.split(".")[-1]] if file_path.split(".")[-1] in files else None
+
     def get_type_visual(file_path):
         files = {
             "docx": "word_icon.png",
@@ -47,10 +62,12 @@ class Message:
             "mp4": "video_icon.png",
             "mov": "video_icon.png",
             "gif": "video_icon.png",
-            "avi": "video_icon.png"
+            "avi": "video_icon.png",
         }
 
-        return files[file_path.split(".")[-1]] if file_path.split(".")[-1] in files else None
+        images = {"jpg", "jpeg", "png", "tiff", "webp", "svg", "heic", "jfif"}
+
+        return None if file_path.split(".")[-1].lower() in images else files.get(file_path.split(".")[-1].lower(), "default_file_icon.png")
 
     
 
