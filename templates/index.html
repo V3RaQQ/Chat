@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <title>Game Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <header class="header">
+        <a href="/register"><button type="button">Register</button></a>
+        <a href="/auth"><button type="button">Login</button></a>
+        {% if user: %}
+        <div class="profile-button-container">
+            <a href="/profile" class="profile-button">
+                {{ user.name }}
+                <img src="{{ url_for('static', filename='images/' + user.avatar_path) }}" alt="Profile">
+            </a>
+        </div>
+        {% else %}
+        <div class="profile-button-container">
+            <a href="/profile" class="profile-button">
+                <b>Ghost</b>
+                <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Profile">
+            </a>
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Clan Chat</h2>
+        </div>
+
+        <div class="chat-messages">
+            {% for message in messages %}
+            <div class="message">
+                <div class="user-avatar-container">
+                    <img src="{{ url_for('static', filename='images/' + message.avatar_path) }}" alt="Avatar" class="user-avatar">
+                    <span class="user-name">{{ message.member_name }}</span>
+                </div>
+                {% if message.file_path: %}
+                    {% if message.type_visual: %}
+                        <a href="/download/{{message.file_path}}"><img src="{{ url_for('static', filename='temp/' + message.type_visual) }}" class="user-file"></a>
+                    {% else %}
+                        <a href="/download/{{message.file_path}}"><img src="{{ url_for('static', filename='temp/' + message.file_path) }}" class="user-file"></a>
+                    {% endif %}
+                {% endif %}
+                <span class="user-message">{{ message.text }}</span>
+            </div>                        
+            {% endfor %}
+        </div>
+
+        <form class="chat-input" action="/send" method="POST" enctype="multipart/form-data">
+            <input name="text" type="text" placeholder="Type your message here..." id="messageInput">
+            <label for="fileInput" class="file-label">
+                <img src="{{url_for('static', filename='images/screpka_icon.png')}}">
+            </label>
+            <input name="user_file" type="file" id="fileInput">
+            <button id="sendBtn" type="submit">Send</button>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+[
+    {
+        "id_message": 0,
+        "user_id": 0,
+        "text": "123",
+        "member_name": "NoIvan",
+        "avatar_path": "DALL\u00b7E 2025-01-04 18.05.40 - A winter-themed logo for a company named StarBooks, which sells books and magazines. The logo features elegant, stylized text of 'StarBooks' in a beau.webp",
+        "file_path": null,
+        "type_visual": null
+    },
+    {
+        "id_message": 1,
+        "user_id": 0,
+        "text": "",
+        "member_name": "NoIvan",
+        "avatar_path": "DALL\u00b7E 2025-01-04 18.05.40 - A winter-themed logo for a company named StarBooks, which sells books and magazines. The logo features elegant, stylized text of 'StarBooks' in a beau.webp",
+        "file_path": "txttxt.txt",
+        "type_visual": "text_icon.png"
+    },
+    {
+        "id_message": 2,
+        "user_id": 0,
+        "text": "",
+        "member_name": "NoIvan",
+        "avatar_path": "DALL\u00b7E 2025-01-04 18.05.40 - A winter-themed logo for a company named StarBooks, which sells books and magazines. The logo features elegant, stylized text of 'StarBooks' in a beau.webp",
+        "file_path": "95b39ae568a77044aca95c770622a905.mp4",
+        "type_visual": "video_icon.png"
+    }
+]

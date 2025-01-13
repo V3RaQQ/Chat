@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile_style.css')}}">
+    <title>Profile Page</title>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="home-button-container">
+            <a href="/" class="home-button">Home</a>
+        </div>
+        <div class="avatar-section">
+            <img class="profile-avatar" src="{{url_for('static', filename='images/' + user.avatar_path)}}" alt="Profile Avatar">
+            <form class="change-image" action="/change_file" method="POST" enctype="multipart/form-data">
+                <label for="fileInput">Выберите файл</label>
+                <input type="file" name="file_form" id="fileInput" />
+                <button type="submit" id="changeImageBtn">Сохранить аватарку</button>
+            </form>
+        </div>
+
+        <div class="profile-name">Ваше имя</div>
+        <form class="change-name" action="/change_name" method="POST">
+            <input name="name" type="text" placeholder="Enter your name" value="{{user.name}}" id="nameInput">
+            <button type="submit" id="changeNameBtn">Сохранить имя</button>
+        </form>
+    </div>
+</body>
+</html>
