@@ -1,6 +1,6 @@
 # Chat Practice Project
 
-Welcome to my **Chat Practice Repository**! 🚀  
+Welcome to my **Chat Practice Repository**! 
 This repository is all about learning and practicing Git, GitHub workflows, and building interactive web applications. It's a hands-on project where I dive into coding, experimenting, and mastering the basics of version control while having fun creating a functional chat application.
 
 ---
@@ -35,5 +35,8 @@ I created this repository not just to explore **Git** and **GitHub**, but also t
 - **Frontend**: HTML + CSS  
 - **Data Storage**: JSON (for user and message data)
 
-  ##In future I plan to add featires by JavaScript.
+
+---
+
+## In future I plan to add featires by JavaScript.
 
