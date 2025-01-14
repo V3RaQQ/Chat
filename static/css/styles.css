@@ -104,11 +104,6 @@ button:hover {
     margin-right: 10px;
 }
 
-.user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
 
 .user-name {
     font-weight: bold;
@@ -166,24 +161,24 @@ button:hover {
 }
 
 .user-file {
-    max-width: 300px; /* Ограничение ширины картинки */
-    max-height: 200px; /* Ограничение высоты картинки */
+    max-width: 300px; 
+    max-height: 200px; 
     margin-top: 10px;
-    border-radius: 10px; /* Скруглённые углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объёмного эффекта */
-    object-fit: cover; /* Корректное масштабирование изображения */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    object-fit: cover; 
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .user-file:hover {
 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Более выраженная тень */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .message {
     display: flex;
     flex-direction:row; 
-    gap: 10px; /* Расстояние между картинкой и текстом */
+    gap: 10px; 
     margin-bottom: 15px;
     padding: 10px;
     /* border: 1px solid #ccc; */
@@ -203,7 +198,11 @@ button:hover {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    image-rendering: auto; 
 }
+
 
 .user-name {
     font-weight: bold;
@@ -222,9 +221,9 @@ button:hover {
 .user-message {
     font-size: 0.95rem;
     color: #555;
-    text-align: center; /* Центровка текста под картинкой */
+    text-align: center; 
     word-wrap: break-word;
-    margin-top: 10px; /* Отступ между текстом и картинкой */
+    margin-top: 10px; 
 }
 
 

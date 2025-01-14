@@ -49,9 +49,27 @@ def download(file_name):
 @app.route("/")
 def home():
     if is_logged():
-        return render_template("index.html", messages=messages, user= User.get_user_by_id(int(request.cookies.get("user_id")), users))
-            
-    return render_template("index.html", messages=messages, user=None)
+        user_id = request.cookies.get("user_id")
+        #check -> user_id in users
+        if user_id and any(user.user_id == int(user_id) for user in users):
+            user = User.get_user_by_id(int(user_id), users)
+            return render_template("index.html", messages=messages, user=user)
+
+        response = make_response(render_template("index.html", messages=messages, user=None))
+        response.delete_cookie("user_id")
+        return response
+
+    response = make_response(render_template("index.html", messages=messages, user=None))
+    response.delete_cookie("user_id")
+    return response
+
+    # if is_logged():
+    #     return render_template("index.html", messages=messages, user= User.get_user_by_id(int(request.cookies.get("user_id")), users))
+    
+    # response = make_response(render_template("index.html", messages=messages, user=None))
+    # if request.cookies.get("user_id"):
+    #     response.delete_cookie("user_id") 
+    # return response
 
 
 @app.route("/profile")
@@ -105,7 +123,7 @@ def send():
             messages.append(Message(user.user_id, user.name, user.avatar_path, text, user_file.filename if user_file else None, Message.get_type_visual(user_file.filename)))
 
         else:
-            messages.append(Message(-1, "Ghost", "profile_icon.png", text))
+            messages.append(Message(-1, "Ghost", "profile_icon.png", text, user_file.filename if user_file else None, Message.get_type_visual(user_file.filename)))
 
         Message.save_to_json(messages)
     return redirect(url_for("home"))
