@@ -42,8 +42,10 @@ else:
 
 @app.route('/download/<file_name>')
 def download(file_name):
-    print(file_name)
-    return send_from_directory('static', f'temp/{file_name}', as_attachment=True)
+    file_path = os.path.join('static', 'temp', file_name)
+    if os.path.exists(file_path):
+        return send_from_directory('static', f'temp/{file_name}', as_attachment=True)
+    return redirect(url_for('home'))#error?404
 
 
 @app.route("/")
