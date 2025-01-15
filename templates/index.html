@@ -48,6 +48,11 @@
                             <a href="/download/{{message.file_path}}" class="file-link">
                                 {{ message.file_path.split(".")[0] if message.file_path.split(".")[0]|length <= 20 else message.file_path.split(".")[0][:20] + '...' }}
                             </a>
+                            <div class="file-weight">
+                                {% if message.file_weight %}
+                                    {{ message.file_weight }} MB
+                                {% endif %}
+                            </div>
                         </div>
                     {% else %}
                         <a href="/download/{{message.file_path}}"><img src="{{ url_for('static', filename='temp/' + message.file_path) }}" class="user-file"></a>

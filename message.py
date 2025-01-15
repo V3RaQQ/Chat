@@ -8,7 +8,7 @@ messages_file = os.path.join(json_path, "messages.json")
 
 class Message:
     id_counter = 0
-    def __init__(self, user_id, member_name, avatar_path, text, file_path=None, type_visual=None) -> None:
+    def __init__(self, user_id, member_name, avatar_path, text, file_path=None, type_visual=None, file_weight=None) -> None:
         
         self.id_message = Message.id_counter
         Message.id_counter += 1
@@ -19,6 +19,7 @@ class Message:
         self.avatar_path = avatar_path
         self.file_path = file_path
         self.type_visual = type_visual
+        self.file_weight = file_weight
 
     def get_json(self):
         return self.__dict__
@@ -35,7 +36,8 @@ class Message:
             messages = []
             for message in json.load(file):
 
-                msg = Message(message["user_id"], message["member_name"], message["avatar_path"], message["text"], message["file_path"], message["type_visual"])
+                msg = Message(message["user_id"], message["member_name"], message["avatar_path"],
+                               message["text"], message["file_path"], message["type_visual"], message["file_weight"])
                 msg.id_message = message["id_message"]
 
                 messages.append(msg)
@@ -55,6 +57,7 @@ class Message:
 
     #     return files[file_path.split(".")[-1]] if file_path.split(".")[-1] in files else None
 
+    @staticmethod#is it correct?
     def get_type_visual(file_path):
         files = {
             "docx": "word_icon.png",
@@ -69,7 +72,6 @@ class Message:
 
         return None if file_path.split(".")[-1].lower() in images else files.get(file_path.split(".")[-1].lower(), "default_file_icon.png")
 
-    
 
 
 

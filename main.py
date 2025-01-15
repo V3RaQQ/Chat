@@ -57,13 +57,13 @@ def home():
 
         response = make_response(render_template("index.html", messages=messages, user=None))
         response.delete_cookie("user_id")
-        return response
+        return response 
+        #to prevent bug with user_id.
 
     response = make_response(render_template("index.html", messages=messages, user=None))
     response.delete_cookie("user_id")
     return response
 
-    # if is_logged():
     #     return render_template("index.html", messages=messages, user= User.get_user_by_id(int(request.cookies.get("user_id")), users))
     
     # response = make_response(render_template("index.html", messages=messages, user=None))
@@ -120,10 +120,15 @@ def send():
                 user_file.save(rf".\static\temp\{user_file.filename}")
 
             user = User.get_user_by_id(int(request.cookies.get("user_id")), users)
-            messages.append(Message(user.user_id, user.name, user.avatar_path, text, user_file.filename if user_file else None, Message.get_type_visual(user_file.filename)))
+            messages.append(Message(user.user_id, user.name, user.avatar_path, text, user_file.filename if user_file else None, 
+                                    Message.get_type_visual(user_file.filename), get_file_weight(user_file.filename)))
 
         else:
-            messages.append(Message(-1, "Ghost", "profile_icon.png", text, user_file.filename if user_file else None, Message.get_type_visual(user_file.filename)))
+            if user_file:
+                user_file.save(rf".\static\temp\{user_file.filename}")
+
+            messages.append(Message(-1, "Ghost", "profile_icon.png", text, user_file.filename if user_file else None, 
+                                    Message.get_type_visual(user_file.filename), get_file_weight(user_file.filename)))
 
         Message.save_to_json(messages)
     return redirect(url_for("home"))
@@ -177,5 +182,26 @@ def auth_submit():
 
 def is_logged():
     return request.cookies.get("user_id", False)
+
+def get_file_weight(filename):
+    folder_path = os.path.join(os.getcwd(), "static", "temp")
+    try:
+        if not os.path.isdir(folder_path):
+            print("os path dir error")
+            return None
+
+        file_path = os.path.join(folder_path, filename)
+
+        if os.path.isfile(file_path):
+            print(os.path.getsize(file_path))
+            return round(os.path.getsize(file_path) / (1024 * 1024), 3) #from bites to mb
+        else:
+            print("os path is file eorror")
+            return None
+
+    except Exception:
+        print("exception erorr")
+        return None 
+    #add logs.
 
 app.run(debug=True)
