@@ -77,6 +77,7 @@ def home():
 @app.route("/profile")
 def profile():
     if is_logged():
+
         return render_template("profile.html", user=User.get_user_by_id(int(request.cookies.get("user_id")), users))
     return redirect(url_for('home'))
     # return render_template("profile.html")
@@ -186,6 +187,9 @@ def is_logged():
     return request.cookies.get("user_id", False)
 
 def get_file_weight(filename):
+    if not filename or filename == "":
+        print(f"filename (filename -> '{filename}') maybe is empty or None")
+
     folder_path = os.path.join(os.getcwd(), "static", "temp")
     try:
         if not os.path.isdir(folder_path):
@@ -206,4 +210,13 @@ def get_file_weight(filename):
         return None 
     #add logs.
 
+# def get_user_files(user: User):
+#     user_files = []
+#     for message in messages:
+#         if message.
+
 app.run(debug=True)
+
+#notes
+# os.getcwd() — возвращает текущую рабочую директорию (папку), в которой выполняется Python-скрипт.
+# any() — проверяет, есть ли хотя бы один элемент в итерируемом объекте, который является истинным

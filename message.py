@@ -27,7 +27,6 @@ class Message:
     @staticmethod
     def save_to_json(messages):
         with open(messages_file, "w") as file:
-            #os getcwd для корректного формирования пути
             json.dump( [message.get_json() for message in messages], file, indent=4)
 
     @staticmethod
@@ -56,9 +55,14 @@ class Message:
     #     }
 
     #     return files[file_path.split(".")[-1]] if file_path.split(".")[-1] in files else None
+##########################
 
-    @staticmethod#is it correct?
+    @staticmethod
     def get_type_visual(file_path):
+        print(f"file_path: {file_path}")
+        if not file_path:
+            return None
+
         files = {
             "docx": "word_icon.png",
             "txt": "text_icon.png",
@@ -70,9 +74,15 @@ class Message:
 
         images = {"jpg", "jpeg", "png", "tiff", "webp", "svg", "heic", "jfif"}
 
-        return None if file_path.split(".")[-1].lower() in images else files.get(file_path.split(".")[-1].lower(), "default_file_icon.png")
 
+        file_type = file_path.split(".")[-1].lower() if file_path else "None"
+        print(f"file_type: {file_type}")
 
+        if file_type in images:
+            return None
+        return files.get(file_type, "default_file_icon.png")
+
+# return None if file_path.split(".")[-1].lower() in images else files.get(file_path.split(".")[-1].lower(), "default_file_icon.png")
 
 
 # msg = Message("Abigail", "Hello")
