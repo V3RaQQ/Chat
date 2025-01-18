@@ -9,15 +9,15 @@ This repository is all about learning and practicing Git, GitHub workflows, and 
 
 This repository serves as a playground to sharpen my skills with **HTTP requests**, **user authentication**, and **file handling** in web development. Here's a quick overview of the key features:
 
-### 💬 Chat Functionality
+### Chat Functionality
 - A simple yet functional chat where you can send messages.  
 - Support for sharing **images and various file types**.  
 
-### 🔐 User Registration & Login
+### User Registration & Login
 - Users can **register** and **log in** to their accounts seamlessly.  
 - The last login is saved in **cookies** for a smoother experience.
 
-### 🖼️ Profile Management
+### Profile Management
 - Users can add or update their **avatar** to personalize their profile.  
 - Profile pictures are stored and displayed dynamically.  
 
