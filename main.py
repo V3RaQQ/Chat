@@ -77,8 +77,8 @@ def home():
 @app.route("/profile")
 def profile():
     if is_logged():
-
-        return render_template("profile.html", user=User.get_user_by_id(int(request.cookies.get("user_id")), users))
+        user_files = get_user_files(User.get_user_by_id(int(request.cookies.get("user_id")), users))
+        return render_template("profile.html", user=User.get_user_by_id(int(request.cookies.get("user_id")), users), user_files=user_files)
     return redirect(url_for('home'))
     # return render_template("profile.html")
 # d = {"a":3}
@@ -210,10 +210,14 @@ def get_file_weight(filename):
         return None 
     #add logs.
 
-# def get_user_files(user: User):
-#     user_files = []
-#     for message in messages:
-#         if message.
+def get_user_files(user: User):
+    user_files = []
+    for message in messages:
+        if message.user_id == user.user_id:
+            if message.type_visual:
+                user_files.append(message)
+    return user_files
+
 
 app.run(debug=True)
 

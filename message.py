@@ -72,7 +72,7 @@ class Message:
             "avi": "video_icon.png",
         }
 
-        images = {"jpg", "jpeg", "png", "tiff", "webp", "svg", "heic", "jfif"}
+        images = {"jpg", "jpeg", "png", "tiff", "webp", "svg", "heic", "jfif", "gif"}
 
 
         file_type = file_path.split(".")[-1].lower() if file_path else "None"

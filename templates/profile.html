@@ -28,5 +28,45 @@
             <button type="submit" id="changeNameBtn">Сохранить имя</button>
         </form>
     </div>
+
+    <div class="user-files-section">
+        <h2>Файлы {{user.name}}</h2>
+        <p class="files-hint">Нажмите, чтобы скачать</p>
+        <div class="files-list">
+            {% for message in user_files %}
+            {% if message.type_visual %}
+            <div class="file-container">
+                <img src="{{ url_for('static', filename='icons/' + message.type_visual) }}" alt="File Icon" class="file-icon">
+                <a href="/download/{{ message.file_path }}" class="file-link">
+                    {{ message.file_path.split(".")[0] if message.file_path and message.file_path.split(".")[0]|length <= 20 else (message.file_path.split(".")[0][:20] + '...') if message.file_path else 'Без имени' }}
+                </a>
+                <div class="file-weight">
+                    {% if message.file_weight %}
+                        {{ message.file_weight }} MB
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+<!--     
+    <div class="user-images-section">
+        <h2>Изображения {{user.name}}</h2>
+        <p class="files-hint">Нажмите, чтобы скачать</p>
+        <div class="files-list">
+            {% for message in user_files %}
+            {% if message.type_visual %}
+            <div class="file-container">
+                <a href="/download/{{ message.file_path }}">
+                    <img src="{{ url_for('static', filename='temp/' + message.file_path) }}" class="user-file" alt="User Image">
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+     -->
+
 </body>
 </html>
