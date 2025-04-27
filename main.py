@@ -6,6 +6,8 @@ import os
 from user import User
 
 
+print(os.getcwd())
+
 app = Flask(__name__)
 
 messages: List[Message] = []
