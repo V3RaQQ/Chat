@@ -1,0 +1,271 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:37:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:41] "GET /static/icons/screpka_icon.png HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:41] "GET /static/icons/profile_icon.png HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:41] "GET /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:41] "GET /static/icons/background.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:41] "GET /favicon.ico HTTP/1.1" 404 -
+file_path: 
+filename (filename -> '') maybe is empty or None
+os path is file eorror
+127.0.0.1 - - [27/Apr/2025 18:37:44] "POST /send HTTP/1.1" 302 -
+127.0.0.1 - - [27/Apr/2025 18:37:44] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:44] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:44] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:44] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:44] "GET /static/images/profile_icon.png HTTP/1.1" 200 -
+file_path: 
+filename (filename -> '') maybe is empty or None
+os path is file eorror
+127.0.0.1 - - [27/Apr/2025 18:37:45] "POST /send HTTP/1.1" 302 -
+127.0.0.1 - - [27/Apr/2025 18:37:45] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:45] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:45] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:45] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:45] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:46] "GET /auth HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:46] "GET /static/icons/background.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:47] "GET /register HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:47] "GET /static/icons/background.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:49] "GET /profile HTTP/1.1" 302 -
+127.0.0.1 - - [27/Apr/2025 18:37:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:37:49] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:49] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:49] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:37:49] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:38:19] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:19] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:19] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:19] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:38:49] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:49] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:49] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:38:49] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:19] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:39:19] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:19] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:19] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:19] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:39:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:39:49] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:49] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:49] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:39:49] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:40:21] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:40:21] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:21] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:21] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:21] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:21] "GET /static/icons/background.jpg HTTP/1.1" 304 -
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:40:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:40:53] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:53] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:53] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:40:53] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:41:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:41:23] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:23] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:23] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:23] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:41:53] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:53] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:53] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:41:53] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:42:23] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:23] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:23] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:23] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:53] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:42:53] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:53] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:53] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:42:53] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:43:23] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:23] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:23] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:24] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:43:54] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:54] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:54] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:43:54] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:44:24] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:24] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:24] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:24] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:44:54] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:54] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:54] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:44:54] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:45:24] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:24] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:24] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:24] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:45:54] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:54] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:54] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:45:54] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:46:24] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:24] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:24] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:24] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:24] "GET /static/icons/background.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:46:54] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:54] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:54] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:46:54] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:47:24] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:24] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:24] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:24] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:54] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:47:54] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:54] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:54] "GET /static/images/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:47:54] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\main.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:48:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:48:25] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:48:25] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:48:25] "GET /static/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:48:25] "GET /static/icons/background.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:48:55] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:48:55] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:48:55] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:48:55] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+ * Detected change in 'c:\\Users\\ivand\\OneDrive\\Рабочий стол\\Chat\\chat_temp\\script.py', reloading
+ * Restarting with stat
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\{'
+  file_user.save(f".\static\images\{file_user.filename}")
+c:\Users\ivand\OneDrive\Рабочий стол\Chat\chat_temp\main.py:93: SyntaxWarning: invalid escape sequence '\s'
+  file_user.save(f".\static\images\{file_user.filename}")
+ * Debugger is active!
+ * Debugger PIN: 136-035-128
+127.0.0.1 - - [27/Apr/2025 18:49:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Apr/2025 18:49:25] "GET /static/css/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:49:25] "GET /static/icons/screpka_icon.png HTTP/1.1" 304 -
+127.0.0.1 - - [27/Apr/2025 18:49:25] "GET /static/icons/profile_icon.png HTTP/1.1" 304 -
