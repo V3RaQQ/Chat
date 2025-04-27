@@ -10,6 +10,12 @@ app = Flask(__name__)
 
 messages: List[Message] = []
 
+# messages = Message.from_json_to_list()
+# users: List[User] = []
+# users = User.from_json_to_list()
+#
+
+
 
 # if os.path.exists("messages.json"):
 #     messages = Message.from_json_to_list()
